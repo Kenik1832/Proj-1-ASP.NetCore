@@ -1,0 +1,9 @@
+при dotnet 8
+
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.0.11
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0
+
+
+dotnet tool install --global dotnet-ef  - Установить инструмент миграций
+
+dotnet ef database update  - Создаём базу

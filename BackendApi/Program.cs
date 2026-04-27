@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer(); // В проекте будут контроллеры
 builder.Services.AddSwaggerGen(); //Подключаем Swagger (интерфейс API) http://localhost:5101/swagger/index.html
 builder.Services.AddControllers(); //В проекте будут контроллеры  +++
+builder.Services.AddDbContext<AppDbContext>(options => 
+    options.UseSqlite("Data Source=app.db")); // Создать файл базы: app.db
+
 
 var app = builder.Build();
 

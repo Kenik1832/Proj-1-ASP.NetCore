@@ -1,0 +1,4 @@
+[AppDbContext.cs]
+AppDbContext    - Это “мост” между API и БД.
+
+DbSet<User>     - Это будущая таблица: Users
